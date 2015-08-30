@@ -64,10 +64,32 @@
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffe-Qn-lkF">
                     <rect key="frame" x="113" y="150" width="150" height="180"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="unZ-fW-PV6">
+                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="unZ-fW-PV6" secondAttribute="height" multiplier="1:1" id="93W-7l-1mX"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MeBoo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHa-fJ-fg6">
+                            <rect key="frame" x="8" y="150" width="134" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="OHa-fJ-fg6" firstAttribute="top" secondItem="unZ-fW-PV6" secondAttribute="bottom" id="2kt-Bb-UR7"/>
+                        <constraint firstAttribute="trailing" secondItem="unZ-fW-PV6" secondAttribute="trailing" id="6Ae-4w-vY6"/>
                         <constraint firstAttribute="width" constant="150" id="KTr-Gf-gVK"/>
                         <constraint firstAttribute="height" constant="180" id="RyB-gr-XmC"/>
+                        <constraint firstAttribute="trailing" secondItem="OHa-fJ-fg6" secondAttribute="trailing" constant="8" id="V7h-TT-7dF"/>
+                        <constraint firstAttribute="bottom" secondItem="OHa-fJ-fg6" secondAttribute="bottom" id="bfE-Cv-ni5"/>
+                        <constraint firstItem="unZ-fW-PV6" firstAttribute="top" secondItem="ffe-Qn-lkF" secondAttribute="top" id="gHs-Pz-eps"/>
+                        <constraint firstItem="OHa-fJ-fg6" firstAttribute="leading" secondItem="ffe-Qn-lkF" secondAttribute="leading" constant="8" id="sgQ-XL-27Z"/>
+                        <constraint firstItem="unZ-fW-PV6" firstAttribute="leading" secondItem="ffe-Qn-lkF" secondAttribute="leading" id="wk8-e2-fcA"/>
                     </constraints>
                 </view>
             </subviews>
@@ -81,11 +103,12 @@
                 <constraint firstAttribute="centerX" secondItem="ffe-Qn-lkF" secondAttribute="centerX" id="sPZ-TA-Xcd"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="463.5" y="435.5"/>
+            <point key="canvasLocation" x="-117.5" y="92.5"/>
         </view>
     </objects>
     <resources>
         <image name="facebook" width="32" height="32"/>
         <image name="google" width="32" height="32"/>
+        <image name="icon" width="180" height="180"/>
     </resources>
 </document>

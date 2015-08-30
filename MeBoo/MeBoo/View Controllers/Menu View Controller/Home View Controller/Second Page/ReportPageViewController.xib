@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportPageViewController" customModule="MeBoo" customModuleProvider="target">
             <connections>
+                <outlet property="tableview" destination="T6h-xp-8wX" id="s0K-ck-Y2U"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

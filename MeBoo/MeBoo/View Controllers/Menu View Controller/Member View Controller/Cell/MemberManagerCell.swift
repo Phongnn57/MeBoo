@@ -25,4 +25,13 @@ class MemberManagerCell: SWTableViewCell {
         // Configure the view for the selected state
     }
     
+    func configCellWithPatient(patient: Patient) {
+        self.nameLB.text = patient.name
+        self.dobLB.text = patient.dob.toString()
+        if patient.gender == 0 {
+            self.imageview.image = UIImage(named: "girl")
+        } else {
+            self.imageview.image = UIImage(named: "boy")
+        }
+    }
 }

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TermViewController" customModule="MeBoo" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zf9-zl-h2I">
+                    <rect key="frame" x="0.0" y="336" width="375" height="91"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TrE-CD-rYi">
+                    <rect key="frame" x="8" y="611" width="176" height="48"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="TrE-CD-rYi" secondAttribute="height" multiplier="11:3" id="Sm8-OU-3zS"/>
+                    </constraints>
+                    <state key="normal" title="Huỷ bỏ">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bD2-ir-UAb">
+                    <rect key="frame" x="192" y="611" width="175" height="48"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="bD2-ir-UAb" secondAttribute="height" multiplier="11:3" id="QJs-Ni-wAt"/>
+                    </constraints>
+                    <state key="normal" title="Đồng ý">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Điều khoản sử dụng" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeE-Kf-3mA">
+                    <rect key="frame" x="8" y="8" width="359" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="5Qb-AH-2We"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B43-f3-EU4">
+                    <rect key="frame" x="8" y="56" width="359" height="547"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="bD2-ir-UAb" secondAttribute="bottom" constant="8" id="8RW-Ah-kTY"/>
+                <constraint firstItem="zeE-Kf-3mA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="BDK-fI-nw4"/>
+                <constraint firstItem="zeE-Kf-3mA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="JxI-g2-Ccj"/>
+                <constraint firstItem="bD2-ir-UAb" firstAttribute="leading" secondItem="TrE-CD-rYi" secondAttribute="trailing" constant="8" id="VNq-Fy-4Vv"/>
+                <constraint firstAttribute="trailing" secondItem="zeE-Kf-3mA" secondAttribute="trailing" constant="8" id="gVm-ac-0Va"/>
+                <constraint firstAttribute="bottom" secondItem="TrE-CD-rYi" secondAttribute="bottom" constant="8" id="mdY-Jm-tzP"/>
+                <constraint firstItem="bD2-ir-UAb" firstAttribute="width" secondItem="TrE-CD-rYi" secondAttribute="width" id="rtC-FI-JXL"/>
+                <constraint firstItem="TrE-CD-rYi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="uJo-vC-gqf"/>
+                <constraint firstAttribute="trailing" secondItem="bD2-ir-UAb" secondAttribute="trailing" constant="8" id="zXR-K2-OrE"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="621.5" y="370.5"/>
+        </view>
+    </objects>
+</document>

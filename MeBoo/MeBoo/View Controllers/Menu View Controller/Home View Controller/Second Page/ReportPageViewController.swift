@@ -10,10 +10,25 @@ import UIKit
 
 class ReportPageViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate, DZNEmptyDataSetDelegate, DZNEmptyDataSetSource {
 
+    @IBOutlet weak var tableview: UITableView!
+    
+    private let CellIdentifier = "ReportCell"
+    
+    var patientInjection: [Patient_Injection]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.tableview.registerNib(UINib(nibName: CellIdentifier, bundle: nil), forCellReuseIdentifier: CellIdentifier)
+        let patients = Patient.MR_findAll() as! [Patient]
+        let patient = patients.first
+        self.patientInjection = Patient_Injection.MR_findAllSortedBy("injectDay", ascending: true, withPredicate: NSPredicate(format: "patientID = \(patient!.id)")) as! [Patient_Injection]
+        
+        for obj in self.patientInjection {
+            println(obj.injectDay.toString())
+        }
+//        self.patientInjection = Patient_Injection.MR_findAllWithPredicate(NSPredicate(format: "patientID = \(patient!.id)")) as! [Patient_Injection]
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,16 +64,13 @@ class ReportPageViewController: BaseViewController, UITableViewDataSource, UITab
 
     // MARK: TABLEVIEW
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.patientInjection.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //        let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! MemberManagerCell
-        //
-        //        cell.delegate = self
-        //        cell.rightUtilityButtons = self.rightButtons() as [AnyObject]
-        
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! ReportCell
+
+        return cell
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

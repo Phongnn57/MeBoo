@@ -76,13 +76,12 @@ extension String {
         return nil
     }
     
-    
     /**
     Parses a string containing a date into an optional NSDate if the string is a well formed.
     The default format is yyyy-MM-dd, but can be overriden.
     :returns: A NSDate parsed from the string or nil if it cannot be parsed as a date.
     */
-    func toDate(format : String? = "yyyy-MM-dd") -> NSDate? {
+    func toDate(format : String? = "dd-MM-yyyy") -> NSDate? {
         let text = self.trimmed().lowercaseString
         var dateFmt = NSDateFormatter()
         dateFmt.timeZone = NSTimeZone.defaultTimeZone()
@@ -100,10 +99,7 @@ extension String {
     func toDateTime(format : String? = "yyyy-MM-dd hh-mm-ss") -> NSDate? {
         return toDate(format: format)
     }
-    
-    
-    
-    
+
     /**
     Strips the specified characters from the beginning of self.
     :returns: Stripped string

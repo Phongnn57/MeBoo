@@ -1,20 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Biography_Statistic" representedClassName="Biography_Statistic" syncable="YES">
         <attribute name="height" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="lastUpdated" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="patientID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="timestamp" attributeType="String" syncable="YES"/>
         <attribute name="weight" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
     </entity>
+    <entity name="Clinic" representedClassName="Clinic" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contactNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Injection_Schedule" representedClassName="Injection_Schedule" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="month" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="number" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="sickID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="Patient" representedClassName="Patient" syncable="YES">
         <attribute name="bloodType" attributeType="String" syncable="YES"/>
-        <attribute name="dob" attributeType="String" syncable="YES"/>
+        <attribute name="dob" attributeType="Date" syncable="YES"/>
         <attribute name="gender" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="lastUpdated" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
@@ -22,8 +35,9 @@
         <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="Patient_Injection" representedClassName="Patient_Injection" syncable="YES">
-        <attribute name="done" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="injectDay" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="injectDay" attributeType="Date" syncable="YES"/>
+        <attribute name="isDone" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="lastUpdated" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="month" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
@@ -32,37 +46,32 @@
         <attribute name="sickID" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="vacName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Pharmacy" representedClassName="Pharmacy" syncable="YES">
-        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="contactNumber" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
-    <entity name="Selected_Sick" representedClassName="Selected_Sick" syncable="YES">
-        <attribute name="patientID" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="sickID" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    <entity name="Patient_Sick" representedClassName="Patient_Sick" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="patientID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="sickID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="Sick" representedClassName="Sick" syncable="YES">
         <attribute name="count" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="descrip" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="gender" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="sickCode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sickName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Sick_Vac" representedClassName="Sick_Vac" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="sid" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="vaccine" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Biography_Statistic" positionX="-63" positionY="-18" width="128" height="105"/>
-        <element name="Injection_Schedule" positionX="-54" positionY="18" width="128" height="90"/>
-        <element name="Patient" positionX="-36" positionY="45" width="128" height="165"/>
-        <element name="Patient_Injection" positionX="-9" positionY="99" width="128" height="180"/>
-        <element name="Pharmacy" positionX="-18" positionY="99" width="128" height="135"/>
-        <element name="Selected_Sick" positionX="0" positionY="126" width="128" height="75"/>
-        <element name="Sick" positionX="18" positionY="135" width="128" height="120"/>
-        <element name="Sick_Vac" positionX="36" positionY="153" width="128" height="75"/>
+        <element name="Biography_Statistic" positionX="-666" positionY="-9" width="128" height="135"/>
+        <element name="Clinic" positionX="-416" positionY="-168" width="128" height="150"/>
+        <element name="Injection_Schedule" positionX="-252" positionY="-72" width="128" height="105"/>
+        <element name="Patient" positionX="-666" positionY="171" width="128" height="180"/>
+        <element name="Patient_Injection" positionX="-9" positionY="138" width="128" height="195"/>
+        <element name="Patient_Sick" positionX="-468" positionY="-27" width="128" height="90"/>
+        <element name="Sick" positionX="-54" positionY="-18" width="128" height="133"/>
+        <element name="Sick_Vac" positionX="-396" positionY="108" width="128" height="88"/>
     </elements>
 </model>
